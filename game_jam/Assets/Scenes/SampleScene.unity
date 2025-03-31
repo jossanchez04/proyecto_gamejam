@@ -212,6 +212,7 @@ Tilemap:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 53584704}
   m_Enabled: 1
+<<<<<<< HEAD
   m_Tiles:
   - first: {x: -9, y: -5, z: 0}
     second:
@@ -2190,11 +2191,19 @@ Tilemap:
   m_TileColorArray:
   - m_RefCount: 180
     m_Data: {r: 1, g: 1, b: 1, a: 1}
+=======
+  m_Tiles: {}
+  m_AnimatedTiles: {}
+  m_TileAssetArray: []
+  m_TileSpriteArray: []
+  m_TileMatrixArray: []
+  m_TileColorArray: []
+>>>>>>> parent of 7afd568 (mapa base)
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Origin: {x: -9, y: -5, z: 0}
-  m_Size: {x: 18, y: 10, z: 1}
+  m_Origin: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0, y: 0, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -2456,7 +2465,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18ab9b03a0c3eda4981ec633ec354e6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 1
   rb2d: {fileID: 423153821}
   moveRight: 0
   moveLeft: 0
