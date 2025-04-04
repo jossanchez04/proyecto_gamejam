@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 
 public class player_controller : MonoBehaviour
 {
@@ -30,10 +31,28 @@ public class player_controller : MonoBehaviour
     public Sprite emptyHeart;
     public GameObject gameOverScreen;
 
+    public float fear = 0f;
+    public Image[] fearImages;
+    public float fearIncrementRate = 1f;
+
+    private float healthDecrementInterval = 1f;
+    private float timeToNextHealthDecrement = 1f;
+
+    public GameObject panelCloseEyes;
+    private Image panelImage;
+    public float closeEyesDuration = 1f; 
+    public float cooldownDuration = 5f; 
+    private bool canCloseEyes = true;  
+    private float currentCooldown = 0f; 
+    private float targetAlpha = 0f; 
+    private float currentAlpha = 0f;
+    public float timeWithEyesClosed = 0f;
+
 
     void Start()
     {
-        
+        panelImage = panelCloseEyes.GetComponent<Image>(); 
+        panelCloseEyes.SetActive(false);
     }
 
     // Update is called once per frame
@@ -41,16 +60,30 @@ public class player_controller : MonoBehaviour
     {
         if (health > 0)
         {
-            playerMovement();
+            PlayerMovement();
+            UpdateFearBar();
+            DecrementHealthOverTime();
+            if (Input.GetKeyDown(KeyCode.E) && canCloseEyes)
+            {
+                StartCoroutine(CloseEyesRoutine());
+            }
         }
         else
         {
             gameOverScreen.SetActive(true);
         }
-        showHealth();
+        ShowHealth();
+        if (!canCloseEyes)
+        {
+            currentCooldown -= Time.deltaTime;
+            if (currentCooldown <= 0f)
+            {
+                canCloseEyes = true;
+            }
+        }
     }
 
-    void playerMovement()
+    void PlayerMovement()
     {
         gameOverScreen.SetActive(false);
         moveInput.x = Input.GetAxisRaw("Horizontal");
@@ -133,7 +166,7 @@ public class player_controller : MonoBehaviour
         }
     }
 
-    void showHealth()
+    void ShowHealth()
     {
         int fullHearts = health / 3;
         int fragments = health % 3;
@@ -164,4 +197,85 @@ public class player_controller : MonoBehaviour
             }
         }
     }
+
+    void UpdateFearBar()
+    {
+        fear += fearIncrementRate * Time.deltaTime;
+        fear = Mathf.Clamp(fear, 0, 100); 
+
+        UpdateFearImages();
+    }
+
+    void UpdateFearImages()
+    {
+        int index = Mathf.FloorToInt(fear / (100f / fearImages.Length)); 
+
+        for (int i = 0; i < fearImages.Length; i++)
+        {
+            if (i <= index)
+            {
+                fearImages[i].enabled = true; 
+            }
+            else
+            {
+                fearImages[i].enabled = false;  
+            }
+        }
+    }
+
+    void DecrementHealthOverTime()
+    {
+        timeToNextHealthDecrement = Mathf.Lerp(1f, 0.1f, fear / 100f);  
+
+        if (timeToNextHealthDecrement <= 0f && health > 0)
+        {
+            health--;  
+            timeToNextHealthDecrement = 1f;  
+        }
+        else
+        {
+            timeToNextHealthDecrement -= Time.deltaTime;  
+        }
+    }
+
+    IEnumerator CloseEyesRoutine()
+    {
+        canCloseEyes = false; 
+        currentCooldown = cooldownDuration; 
+
+        panelCloseEyes.SetActive(true); 
+        targetAlpha = 1f;  
+
+        float timeElapsed = 0f;
+        while (timeElapsed < closeEyesDuration)
+        {
+            currentAlpha = Mathf.Lerp(0f, 1f, timeElapsed / closeEyesDuration); 
+            panelImage.color = new Color(0f, 0f, 0f, currentAlpha);  
+            timeElapsed += Time.deltaTime;
+            yield return null;  
+        }
+        panelImage.color = new Color(0f, 0f, 0f, 1f);  
+
+        fear -= 10f;  
+        fear = Mathf.Clamp(fear, 0f, 100f);  
+
+        float timeWithEyesClosedElapsed = 0f;  
+        while (timeWithEyesClosedElapsed < closeEyesDuration)
+        {
+            timeWithEyesClosedElapsed += Time.deltaTime;  
+            yield return null;
+        }
+
+        timeElapsed = 0f;
+        while (timeElapsed < closeEyesDuration)
+        {
+            currentAlpha = Mathf.Lerp(1f, 0f, timeElapsed / closeEyesDuration); 
+            panelImage.color = new Color(0f, 0f, 0f, currentAlpha);  
+            timeElapsed += Time.deltaTime;
+            yield return null;
+        }
+        panelImage.color = new Color(0f, 0f, 0f, 0f);  
+        panelCloseEyes.SetActive(false);  
+    }
+
 }
