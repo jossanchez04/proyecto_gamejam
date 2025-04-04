@@ -209,7 +209,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SkitteringHand_0: 6331298531092095571
+      SkitteringHand_1: -1403586651127554494
+      SkitteringHand_2: 4227209443721606850
+      SkitteringHand_3: 985096532034435031
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

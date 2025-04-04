@@ -209,7 +209,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      MutilatedStumbler_0: -2963237468980745253
+      MutilatedStumbler_1: -2217743743108310589
+      MutilatedStumbler_2: -3078303961084203516
+      MutilatedStumbler_3: -7074123965829269768
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

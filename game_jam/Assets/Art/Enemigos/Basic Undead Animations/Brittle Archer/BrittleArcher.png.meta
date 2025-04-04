@@ -209,7 +209,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BrittleArcher_0: 2484806862818839762
+      BrittleArcher_1: 3331771440647664766
+      BrittleArcher_2: 6193990114687984451
+      BrittleArcher_3: -670640806801111938
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

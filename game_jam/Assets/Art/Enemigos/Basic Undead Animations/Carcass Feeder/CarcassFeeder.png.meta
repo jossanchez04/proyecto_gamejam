@@ -209,7 +209,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      CarcassFeeder_0: 7412434355084458010
+      CarcassFeeder_1: -2222816245452210348
+      CarcassFeeder_2: -1246949396092817709
+      CarcassFeeder_3: 8673097472971033604
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

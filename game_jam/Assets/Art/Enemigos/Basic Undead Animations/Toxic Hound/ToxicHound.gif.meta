@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ToxicHound_0: 3345275420131643811
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      GiantRoyalScarab_0: 1276407040704038779
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

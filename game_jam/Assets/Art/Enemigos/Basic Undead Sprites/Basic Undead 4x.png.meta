@@ -484,7 +484,22 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Basic Undead 4x_0: 3585266024333775541
+      Basic Undead 4x_1: -3182181989220851064
+      Basic Undead 4x_10: 4511845880356940946
+      Basic Undead 4x_11: -8100106558602502158
+      Basic Undead 4x_12: -1389818248878589236
+      Basic Undead 4x_13: 659887453048554618
+      Basic Undead 4x_14: 9145851755527421654
+      Basic Undead 4x_2: 2829568027489995328
+      Basic Undead 4x_3: 4886706735432902748
+      Basic Undead 4x_4: -2085949130428274722
+      Basic Undead 4x_5: 8170753524423433395
+      Basic Undead 4x_6: 7518812735456907219
+      Basic Undead 4x_7: -2685484975440392679
+      Basic Undead 4x_8: 5925251031409411514
+      Basic Undead 4x_9: 1619276524050071375
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

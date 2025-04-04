@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      UnravelingCrawler_0: 2092209093185101619
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

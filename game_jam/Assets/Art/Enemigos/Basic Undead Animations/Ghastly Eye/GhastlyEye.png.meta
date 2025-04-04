@@ -209,7 +209,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      GhastlyEye_0: -8922377008944328758
+      GhastlyEye_1: -5257830348369535671
+      GhastlyEye_2: -1954418032918802450
+      GhastlyEye_3: -2787781795395871434
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

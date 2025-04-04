@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SandGhoul_0: 1608854160820213956
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

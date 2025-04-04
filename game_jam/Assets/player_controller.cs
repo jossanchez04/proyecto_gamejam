@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class player_controller : MonoBehaviour
 {
@@ -20,7 +21,14 @@ public class player_controller : MonoBehaviour
     public GameObject faceD;
 
     public Animator playerAnimations;
-    
+
+    public int health = 9;
+    public Image[] hearts;
+    public Sprite fullHeart;
+    public Sprite twoThirdHeart;
+    public Sprite oneThirdHeart;
+    public Sprite emptyHeart;
+    public GameObject gameOverScreen;
 
 
     void Start()
@@ -31,6 +39,20 @@ public class player_controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (health > 0)
+        {
+            playerMovement();
+        }
+        else
+        {
+            gameOverScreen.SetActive(true);
+        }
+        showHealth();
+    }
+
+    void playerMovement()
+    {
+        gameOverScreen.SetActive(false);
         moveInput.x = Input.GetAxisRaw("Horizontal");
         moveInput.y = Input.GetAxisRaw("Vertical");
 
@@ -40,7 +62,8 @@ public class player_controller : MonoBehaviour
         {
             moveInput.y = 0;
             rb2d.linearVelocity = moveInput * speed;
-        } else
+        }
+        else
         {
             moveInput.x = 0;
             rb2d.linearVelocity = moveInput * speed;
@@ -55,7 +78,7 @@ public class player_controller : MonoBehaviour
             faceU.SetActive(false);
             faceD.SetActive(false);
             playerAnimations.Play("WalkR");
-        } 
+        }
         else
         {
             moveRight = false;
@@ -107,6 +130,38 @@ public class player_controller : MonoBehaviour
         if (moveInput.x == 0 && moveInput.y == 0)
         {
             playerAnimations.Play("PlayerIdle");
+        }
+    }
+
+    void showHealth()
+    {
+        int fullHearts = health / 3;
+        int fragments = health % 3;
+
+        for (int i = 0; i < hearts.Length; i++)
+        {
+            if (i < fullHearts)
+            {
+                hearts[i].sprite = fullHeart;
+                hearts[i].enabled = true;
+            }
+            else if (i == fullHearts)
+            {
+                // Show partial heart
+                if (fragments == 2)
+                    hearts[i].sprite = twoThirdHeart;
+                else if (fragments == 1)
+                    hearts[i].sprite = oneThirdHeart;
+                else
+                    hearts[i].sprite = emptyHeart;
+
+                hearts[i].enabled = true;
+            }
+            else
+            {
+                hearts[i].sprite = emptyHeart;
+                hearts[i].enabled = true;
+            }
         }
     }
 }

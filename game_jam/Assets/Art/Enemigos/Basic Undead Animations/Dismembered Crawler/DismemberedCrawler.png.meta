@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      DismemberedCrawler_0: -3626193068918082940
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

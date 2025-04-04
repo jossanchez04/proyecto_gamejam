@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      DecrepitBones_0: 8959596300237409213
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
