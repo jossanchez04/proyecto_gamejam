@@ -93,7 +93,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -146,11 +146,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 36
-        width: 17
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        y: 35
+        width: 16
+        height: 16
+      alignment: 9
+      pivot: {x: 0.55002266, y: -0.20031834}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -167,12 +167,12 @@ TextureImporter:
       name: Basic Undead 1x_1
       rect:
         serializedVersion: 2
-        x: 18
-        y: 36
-        width: 18
-        height: 12
+        x: 19
+        y: 35
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -191,10 +191,10 @@ TextureImporter:
         serializedVersion: 2
         x: 37
         y: 36
-        width: 17
-        height: 11
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -211,12 +211,12 @@ TextureImporter:
       name: Basic Undead 1x_3
       rect:
         serializedVersion: 2
-        x: 39
-        y: 19
-        width: 12
-        height: 17
+        x: 54
+        y: 37
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -233,12 +233,12 @@ TextureImporter:
       name: Basic Undead 1x_4
       rect:
         serializedVersion: 2
-        x: 57
-        y: 18
-        width: 13
-        height: 18
+        x: 71
+        y: 37
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -255,12 +255,12 @@ TextureImporter:
       name: Basic Undead 1x_5
       rect:
         serializedVersion: 2
-        x: 58
-        y: 36
-        width: 12
-        height: 17
+        x: 0
+        y: 19
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -277,12 +277,12 @@ TextureImporter:
       name: Basic Undead 1x_6
       rect:
         serializedVersion: 2
-        x: 73
-        y: 18
-        width: 15
-        height: 18
+        x: 19
+        y: 19
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -299,12 +299,12 @@ TextureImporter:
       name: Basic Undead 1x_7
       rect:
         serializedVersion: 2
-        x: 75
-        y: 36
-        width: 12
-        height: 18
+        x: 36
+        y: 19
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -321,12 +321,12 @@ TextureImporter:
       name: Basic Undead 1x_8
       rect:
         serializedVersion: 2
-        x: 1
-        y: 20
+        x: 52
+        y: 19
         width: 16
-        height: 11
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -343,12 +343,12 @@ TextureImporter:
       name: Basic Undead 1x_9
       rect:
         serializedVersion: 2
-        x: 19
+        x: 71
         y: 19
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -365,12 +365,12 @@ TextureImporter:
       name: Basic Undead 1x_10
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 18
-        height: 9
+        x: 1
+        y: 1
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -387,12 +387,12 @@ TextureImporter:
       name: Basic Undead 1x_11
       rect:
         serializedVersion: 2
-        x: 19
-        y: 0
+        x: 18
+        y: 1
         width: 16
-        height: 11
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -410,11 +410,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 37
-        y: 0
+        y: 1
         width: 16
-        height: 14
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -431,12 +431,12 @@ TextureImporter:
       name: Basic Undead 1x_13
       rect:
         serializedVersion: 2
-        x: 56
-        y: 0
-        width: 14
+        x: 54
+        y: 1
+        width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -453,12 +453,12 @@ TextureImporter:
       name: Basic Undead 1x_14
       rect:
         serializedVersion: 2
-        x: 75
-        y: 0
-        width: 12
-        height: 18
+        x: 72
+        y: 1
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -475,7 +475,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 14f1fd978bd837a46a80c3014c30b33f
     internalID: 0
     vertices: []
     indices: 

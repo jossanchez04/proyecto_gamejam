@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: d14530b3163eabd45951416bba9bac3c
+guid: 948f56b9bfde4d149a081823a7a69c4f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6182296104549173301
-    second: VampireBat_0
+      213: -4756015642126860546
+    second: sandal_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: VampireBat_0
+      name: sandal_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 2
-        width: 16
-        height: 11
+        x: 84
+        y: 48
+        width: 93
+        height: 204
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bc7b018b272143aa0800000000000000
-      internalID: -6182296104549173301
+      spriteID: efeb3d0d8fc3ffdb0800000000000000
+      internalID: -4756015642126860546
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      VampireBat_0: -6182296104549173301
+      sandal_0: -4756015642126860546
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
