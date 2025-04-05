@@ -55,4 +55,18 @@ public class EnemyFollowPlayer : MonoBehaviour
         // Movement
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.name.Contains("arrow"))
+        {
+            enemy_health health = GetComponent<enemy_health>();
+            if (health != null)
+            {
+                health.TakeDamage(1);
+            }
+
+            Destroy(collision.gameObject);
+        }
+    }
 }

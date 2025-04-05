@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class player_controller : MonoBehaviour
 {
@@ -13,6 +14,9 @@ public class player_controller : MonoBehaviour
     public bool moveLeft = false;
     public bool moveUp = false;
     public bool moveDown = false;
+    public bool justAttacked = false;
+
+    public float attackCooldown = 1f;
 
     public int playerDirection;
 
@@ -20,6 +24,11 @@ public class player_controller : MonoBehaviour
     public GameObject faceL;
     public GameObject faceU;
     public GameObject faceD;
+
+    public GameObject sandalR;
+    public GameObject sandalL;
+    public GameObject sandalU;
+    public GameObject sandalD;
 
     public Animator playerAnimations;
 
@@ -48,6 +57,10 @@ public class player_controller : MonoBehaviour
     private float currentAlpha = 0f;
     public float timeWithEyesClosed = 0f;
 
+    public GameObject sandalPrefab;
+
+    public GameObject restartButton;
+
 
     void Start()
     {
@@ -71,6 +84,7 @@ public class player_controller : MonoBehaviour
         else
         {
             gameOverScreen.SetActive(true);
+            restartButton.SetActive(true);
         }
         ShowHealth();
         if (!canCloseEyes)
@@ -164,6 +178,49 @@ public class player_controller : MonoBehaviour
         {
             playerAnimations.Play("PlayerIdle");
         }
+
+        if (justAttacked == true && attackCooldown > 0)
+        {
+            attackCooldown -= Time.deltaTime;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space) && attackCooldown <= 0f)
+        {
+            if (moveUp)
+            {
+                Instantiate(sandalPrefab, transform.position, Quaternion.Euler(new Vector3(0, 0, 0)));
+            }
+            else if (moveDown)
+            {
+                Instantiate(sandalPrefab, transform.position, Quaternion.Euler(new Vector3(0, 0, 180)));
+            }
+            else if (moveLeft)
+            {
+                Instantiate(sandalPrefab, transform.position, Quaternion.Euler(new Vector3(0, 0, 90)));
+            }
+            else if (moveRight)
+            {
+                Instantiate(sandalPrefab, transform.position, Quaternion.Euler(new Vector3(0, 0, 270)));
+            }
+
+            attackCooldown = 1f; // Reset the cooldown timer
+        }
+        else
+        {
+            attackCooldown -= Time.deltaTime; // Decrease cooldown over time
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("EnemyProjectile"))
+        {
+            health -= 1;
+        }
+    }
+    public void Restart()
+    {
+        SceneManager.LoadScene(2);
     }
 
     void ShowHealth()

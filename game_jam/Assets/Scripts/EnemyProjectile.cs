@@ -29,6 +29,11 @@ public class EnemyProjectile : MonoBehaviour
         // Damage player if hit
         if (collision.CompareTag("Player"))
         {
+            player_controller player = collision.GetComponent<player_controller>();
+            if (player != null)
+            {
+                player.health -= 1;
+            }
         }
 
         // Spawn hit effect if assigned

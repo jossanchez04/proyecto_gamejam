@@ -66,4 +66,18 @@ public class RandomEnemyMovement : MonoBehaviour
         // Stop moving
         moveDirection = Vector2.zero;
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.name.Contains("arrow")) 
+        {
+            enemy_health health = GetComponent<enemy_health>();
+            if (health != null)
+            {
+                health.TakeDamage(1);
+            }
+
+            Destroy(collision.gameObject); 
+        }
+    }
 }
