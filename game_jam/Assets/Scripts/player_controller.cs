@@ -45,7 +45,7 @@ public class player_controller : MonoBehaviour
     public float fearIncrementRate = 1f;
 
     private float healthDecrementInterval = 1f;
-    private float timeToNextHealthDecrement = 1f;
+    public float timeToNextHealthDecrement = 10f;
 
     public GameObject panelCloseEyes;
     private Image panelImage;
@@ -220,8 +220,7 @@ public class player_controller : MonoBehaviour
     }
     public void Restart()
     {
-        SceneManager.LoadScene("SampleScene");
-        //SceneManager.LoadScene(2);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     void ShowHealth()
@@ -283,18 +282,22 @@ public class player_controller : MonoBehaviour
 
     void DecrementHealthOverTime()
     {
-        timeToNextHealthDecrement = Mathf.Lerp(1f, 0.1f, fear / 100f);  
-
-        if (timeToNextHealthDecrement <= 0f && health > 0)
+        if (fear >= 100f)
         {
-            health--;  
-            timeToNextHealthDecrement = 1f;  
+            timeToNextHealthDecrement -= Time.deltaTime;
+
+            if (timeToNextHealthDecrement <= 0f)
+            {
+                health--;
+                timeToNextHealthDecrement = healthDecrementInterval; 
+            }
         }
         else
         {
-            timeToNextHealthDecrement -= Time.deltaTime;  
+            timeToNextHealthDecrement = healthDecrementInterval;
         }
     }
+
 
     IEnumerator CloseEyesRoutine()
     {

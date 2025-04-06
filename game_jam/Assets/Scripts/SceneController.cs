@@ -49,4 +49,10 @@ public class SceneController : MonoBehaviour
 
         SceneManager.LoadSceneAsync(sceneName);
     }
+
+    public void RestartGame()
+    {
+        Debug.Log("Restarting game...");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
 }

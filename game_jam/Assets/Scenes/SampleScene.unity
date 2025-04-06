@@ -27590,6 +27590,7 @@ MonoBehaviour:
   - {fileID: 632060170}
   - {fileID: 169707298}
   fearIncrementRate: 1
+  timeToNextHealthDecrement: 15
   panelCloseEyes: {fileID: 904443494}
   closeEyesDuration: 1
   cooldownDuration: 5
@@ -29470,9 +29471,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 423153823}
-        m_TargetAssemblyTypeName: player_controller, Assembly-CSharp
-        m_MethodName: Restart
+      - m_Target: {fileID: 2083660052}
+        m_TargetAssemblyTypeName: SceneController, Assembly-CSharp
+        m_MethodName: RestartGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
