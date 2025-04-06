@@ -269,8 +269,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "El personaje que van a manejar se llama Do\xF1a Ana. Como cualquier otra
-    persona, ella decidi\xF3 financiar una refrigeradora Gollo y halla manera para
-    pagarla"
+    persona, ella decidi\xF3 financiar una refrigeradora Gollo y no halla manera
+    para pagarla."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -660,9 +660,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Le recomendaron a Do\xF1a Ana ir a la Isla San Lucas para encontrar un
-    tesoro que la ayudar\xEDa a pagar las gollocuotas. Tendr\xE1 que derrotar enemigos
-    para obtener este tesoro."
+  m_text: "Le recomendaron ir a la Isla San Lucas para encontrar un tesoro que la
+    ayudar\xEDa a pagar las gollocuotas. Tendr\xE1 que derrotar enemigos en cada
+    nivel para obtener este tesoro."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
