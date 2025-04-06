@@ -15,10 +15,14 @@ public class StartGame : MonoBehaviour
             } 
             else if (currentScene.name == "prejuego") {
 
+                SceneManager.LoadScene("backstory");
+            }
+            else if (currentScene.name == "backstory")
+            {
+
                 SceneManager.LoadScene("SampleScene");
             }
 
-            
         }
     }
 }

@@ -8,6 +8,7 @@ public class enemy_health : MonoBehaviour
     void Start()
     {
         currentHealth = maxHealth;
+        SceneController.instance.RegisterEnemy();
     }
 
     public void TakeDamage(int damage)
@@ -22,7 +23,7 @@ public class enemy_health : MonoBehaviour
 
     void Die()
     {
-        // Optional: Play death animation or particle effect
         Destroy(gameObject);
+        SceneController.instance.UnregisterEnemy();
     }
 }

@@ -220,7 +220,8 @@ public class player_controller : MonoBehaviour
     }
     public void Restart()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene("SampleScene");
+        //SceneManager.LoadScene(2);
     }
 
     void ShowHealth()
