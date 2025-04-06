@@ -27589,7 +27589,7 @@ MonoBehaviour:
   - {fileID: 1184728422}
   - {fileID: 632060170}
   - {fileID: 169707298}
-  fearIncrementRate: 2
+  fearIncrementRate: 1.5
   timeToNextHealthDecrement: 15
   panelCloseEyes: {fileID: 904443494}
   closeEyesDuration: 1
