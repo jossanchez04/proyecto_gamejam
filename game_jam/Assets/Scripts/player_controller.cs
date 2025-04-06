@@ -61,11 +61,15 @@ public class player_controller : MonoBehaviour
 
     public GameObject restartButton;
 
+    private bool isGameOver = false;
+
 
     void Start()
     {
         panelImage = panelCloseEyes.GetComponent<Image>(); 
         panelCloseEyes.SetActive(false);
+
+        isGameOver = false;
     }
 
     // Update is called once per frame
@@ -81,10 +85,10 @@ public class player_controller : MonoBehaviour
                 StartCoroutine(CloseEyesRoutine());
             }
         }
-        else
+        else if (!isGameOver)
         {
-            gameOverScreen.SetActive(true);
-            restartButton.SetActive(true);
+            isGameOver = true;
+            StartCoroutine(GameOverRoutine());
         }
         ShowHealth();
         if (!canCloseEyes)
@@ -95,6 +99,16 @@ public class player_controller : MonoBehaviour
                 canCloseEyes = true;
             }
         }
+    }
+
+    IEnumerator GameOverRoutine()
+    {
+        gameOverScreen.SetActive(true);
+        restartButton.SetActive(false); 
+
+        yield return new WaitForSeconds(2f);
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     void PlayerMovement()

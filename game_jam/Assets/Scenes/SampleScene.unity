@@ -27589,11 +27589,11 @@ MonoBehaviour:
   - {fileID: 1184728422}
   - {fileID: 632060170}
   - {fileID: 169707298}
-  fearIncrementRate: 1
+  fearIncrementRate: 2
   timeToNextHealthDecrement: 15
   panelCloseEyes: {fileID: 904443494}
   closeEyesDuration: 1
-  cooldownDuration: 5
+  cooldownDuration: 3
   timeWithEyesClosed: 0
   sandalPrefab: {fileID: 114011697100326865, guid: 6397b0caf52e3ab47beb62c25fa83f41, type: 3}
   restartButton: {fileID: 1335469104}
