@@ -17,8 +17,11 @@ public class StartGame : MonoBehaviour
 
                 SceneManager.LoadScene("backstory");
             }
-            else if (currentScene.name == "backstory")
-            {
+            else if (currentScene.name == "backstory") {
+
+                SceneManager.LoadScene("instrucciones");
+            }
+            else if (currentScene.name == "instrucciones") {
 
                 SceneManager.LoadScene("SampleScene");
             }
